@@ -16,5 +16,5 @@ setup(name='samanage3',
       author_email='cditusa@gmail.com',
       url='https://github.com/toose11/samanage',
       license=license,
-      packages=['samanage'],
-     )
+      packages=['samanage3'],
+)
