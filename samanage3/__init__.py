@@ -182,7 +182,7 @@ class Samanage(object):
 
 
 def main():
-    parser = argparse.ArgumentParser(description='Samanage API script')
+    parser = argparse.ArgumentParser(description='Samanage Python API')
     parser.add_argument('-T', '--token', required=True, type=argparse.FileType('r', encoding='UTF-8'),
         metavar='FILE', help='Token file to connect to Samanage')
     parser.add_argument('-t', '--type', required=True)
@@ -196,9 +196,8 @@ def main():
     parser.add_argument('-v', '--verbose', action='count')
     args = parser.parse_args()
 
-    if args.verbose is None:
-        log_level = logging.ERROR
-    elif args.verbose == 1:
+    log_level = logging.ERROR
+    if args.verbose == 1:
         log_level = logging.WARN
     elif args.verbose == 2:
         log_level = logging.INFO

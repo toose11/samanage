@@ -17,4 +17,5 @@ setup(name='samanage3',
       url='https://github.com/toose11/samanage',
       license=license,
       packages=['samanage3'],
+      install_requires=['requests']
 )
