@@ -196,8 +196,9 @@ def main():
     parser.add_argument('-v', '--verbose', action='count')
     args = parser.parse_args()
 
-    log_level = logging.ERROR
-    if args.verbose == 1:
+    if args.verbose == None:
+        log_level = logging.ERROR
+    elif args.verbose == 1:
         log_level = logging.WARN
     elif args.verbose == 2:
         log_level = logging.INFO
